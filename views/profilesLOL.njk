@@ -1,0 +1,150 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    {% block head %}
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Bora jogar? - CS:GO
+        </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/690023297727201317/720356110313324585/logo3.png">
+    {% endblock %}
+
+<body id='igorLOL-background'>
+    
+
+    <div id='igorLOL-game'>
+            <img src="https://www.xaimer.com.br/arquivos/PRODUTOS/5501581998181487686/56_G_Riot-Points-League-Of-Legends.jpg" alt="lol">
+        <h2>League of Legends</h2>
+    </div>
+
+    <div class="profile">
+        {% for item in items %}
+            <section id="igorLOL-pat" class="profile_online">
+                <div class="first">
+                    <div class="profile_image">
+                        <img src={{item.image}} alt="eu">
+                    </div>
+
+                    <div class="profile_name">
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                </div>
+                <div class="profile_game_name">
+                    <p>
+                        {{item.gameName}}
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <div class="patente">
+                        <img id='igorLOL-patente' src={{item.patenteimg5}} alt="platina">
+                        <p>
+                            {{item.patente5}}
+                        </p>
+                    </div>
+
+                    <div class="call_online">
+                        <p>
+                            {{item.call}}
+                        </p>
+                    </div>
+
+                    <div class="invite">
+                        <img src={{item.inviteimg}} alt="convite">
+                        <a>{{item.invite}}</a>
+
+                    </div>
+
+                </div>
+
+            </section>
+        {% endfor %}
+    </div>
+
+    <div class="modal-overlay">
+        <div  class="modal">
+            <a class="close-modal">
+                <span class="material-icons">
+                    highlight_off
+                </span>
+            </a>
+
+            <div  class="modal-content">
+                <div class="chat-profile">
+                    <div class="profile_image">
+                        <img id="chat-image" src="https://cdn.discordapp.com/attachments/689605205313978476/722256929174454302/8e17c2b887ac649e3a3827970350f54b.png" alt="eu">
+                        <img id="game-image" src="https://www.xaimer.com.br/arquivos/PRODUTOS/5501581998181487686/56_G_Riot-Points-League-Of-Legends.jpg" alt="League of Legends">
+                    </div>
+
+                    <div >
+                        <h1 id="chat-name">
+                            Gevert
+                        </h1>
+                    </div>
+
+                    <div class="profile_game_name">
+                        <p id="profile-chat-name">eboy triste</p>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <div class="caixa-texto">
+                        <span id="add" class="material-icons">add_circle_outline</span>
+                        <input type="text" placeholder="Digite aqui...">
+                        <span id="send" class="material-icons">send</span>
+                    </div>
+                </div>
+
+                <div class="text">
+                    <div class="my-text">
+                        <p>
+                            Eae, bora jogar??
+                        </p>
+                        <img src="https://image.flaticon.com/icons/svg/2919/2919573.svg" alt="profile-image">
+                    </div>
+
+                    <div class="his-text">
+                        <img src="https://cdn.discordapp.com/attachments/689605205313978476/722256929174454302/8e17c2b887ac649e3a3827970350f54b.png" alt="perfil-image">
+                        <p>koe, bora mano!!</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤ
+</p>
+
+<script src="scripts.js"></script>
+
+</body>
+{% endblock %}
+
+    {% block igorheader %}
+         <header id='igorLOL-header'>
+            <div class="top">
+                <div class="header-image">
+                    <a class="a-igor" href="/inicio"><img src="https://cdn.discordapp.com/attachments/689605205313978476/722165785946095696/logo3.png" alt="logo"></a>
+                </div>
+                <div class="menu a-bah">
+                    <a href="/sobre">Sobre</a>
+                    <a href="/ajuda">Ajuda</a>
+                    <a href="/lider">Leaderboard</a>
+                    <a href="/amigos">Amigos</a>
+                </div>
+                <div class="choose-game">
+                    <span id="igor" class="material-icons">account_box</span>
+                </div>
+                <div id="icon"></div>
+            </div>
+        </header>
+    {% endblock igorheader %}
+
+    

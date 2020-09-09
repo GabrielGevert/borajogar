@@ -1,0 +1,57 @@
+{% extends "codin.njk" %}
+
+
+{% block head %}
+        
+    <title>Bora Jogar? - Games</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/690023297727201317/720356110313324585/logo3.png">
+{% endblock %}
+
+
+
+{% block content %}
+
+
+        
+             <div id="inicio">  
+                
+                <h2>
+                    {{imgs.desc}} <br>
+                    {{imgs.escolha}}
+                </h2>
+
+               <div class="jogos">
+            {% for game in imgs.games %}
+            <a href=" {{game.route}} "> <img src={{game.gameImage}} alt=" {{game.gameName}} "> <p> {{game.gameName}} </p> </a>
+               
+               {% endfor %}
+               </div> 
+
+            </div>
+
+    
+    {% endblock %}
+
+
+{% block igorheader %}
+ <header >
+            <div class="top">
+                <div class="header-image">
+                    <img src="https://cdn.discordapp.com/attachments/689605205313978476/722165785946095696/logo3.png" alt="logo">
+                </div>
+                <div class="menu">
+                    <a href="/sobre">Sobre</a>
+                    <a href="/ajuda">Ajuda</a>
+                    <a href="/">Leaderboard</a>
+                    <a href="/inicio">Convites</a>
+                    <a href="/">Amigos</a>
+                </div>
+                <div class="choose-game">
+                    <span id="igor" class="material-icons">account_box</span>
+                </div>
+                <div id="icon"></div>
+            </div>
+        </header>
+{% endblock igorheader %}
+
+   

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        {% block head %}
+
+            <title>Bora Jogar?</title>
+
+        {% endblock %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/styles.css">
+
+    </head>
+
+    
+        
+    {% block igorheader %}
+    {% endblock igorheader %}
+
+        <div class="header-modal">
+            <main id="main-igor">
+                <a href="/formulario"> Criar SubConta</a>
+                <div class="modal-game">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/c/ce/Counter-Strike_Global_Offensive.jpg" alt="">
+                    <p> Cs:go</p>
+                </div>
+                <div class="modal-game">
+                    <img src="https://img.ibxk.com.br/2018/04/27/27162254680256.jpg" alt="">
+                    <p> Fortnite</p>
+                </div>
+                <div class="modal-game">
+                    <img src="https://www.xaimer.com.br/arquivos/PRODUTOS/5501581998181487686/56_G_Riot-Points-League-Of-Legends.jpg" alt="">
+                    <p>LOL</p>
+                </div>
+                <div class="modal-game">
+                    <img src="https://imag.malavida.com/mvimgbig/download-fs/call-of-duty-warzone-26418-0.jpg" alt="">
+                    <p>COD</p>
+                </div>
+            </main>
+        </div>
+        
+
+
+
+        {% block content %}
+        {% endblock %}
+
+        <script>
+             const profileModal = document.querySelector('.header-modal')
+            const profileClick = document.querySelector('#icon')
+
+                profileClick.addEventListener("click", function(){
+                profileModal.classList.toggle('hide')
+            })
+        </script>
+        
+    
+
+</html>

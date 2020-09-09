@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.0">
+    <title>Subconta</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="content">
+
+    <header>
+        <div class="form-image">
+            <img src="https://cdn.discordapp.com/attachments/690023297727201317/720356110313324585/logo3.png" alt="logo">
+        </div>
+    </header>
+
+    <form action="">
+
+        <h2>Escolha um jogo:</h2>
+
+           <div class="items-grid">
+                <li data-id="cs:go" class="grey">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/c/ce/Counter-Strike_Global_Offensive.jpg" alt="cs:go">
+                </li>
+
+                <li data-id="R6" class="grey">
+                    <img src="https://http2.mlstatic.com/tom-clancys-rainbow-six-siege-original-steam-D_NQ_NP_682910-MLB29663081788_032019-F.jpg" alt=" R6 ">                    
+                </li>
+
+                <li data-id="fortnite" class="grey">
+                    <img src="https://img.ibxk.com.br/2018/04/27/27162254680256.jpg" alt="fortnite">                  
+                </li>
+
+                <li data-id="Lol" class="grey">
+                    <img src="https://www.xaimer.com.br/arquivos/PRODUTOS/5501581998181487686/56_G_Riot-Points-League-Of-Legends.jpg" alt="Lol">                  
+                </li>
+
+                <li data-id="Wow " class="grey">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71lamwcnkYL.jpg" alt="Wow">                 
+                </li>
+
+                <li data-id="warzone" class="grey">
+                    <img src="https://www.mobygames.com/images/covers/l/640518-call-of-duty-warzone-playstation-4-front-cover.png" alt="warzone">
+                    
+                </li>
+                    <a id="butao" href="/inicio"> Proximo </a> 
+            </div>
+    </form>
+</div>
+
+
+
+
+
+    <script>
+    const form = document.querySelectorAll('.items-grid li')
+    
+
+for (let list of form){
+    list.addEventListener("click", function(){
+        list.classList.toggle('grey')
+    })
+}
+
+   function conclude(){
+        const btn = document.querySelector('#butao')
+        btn.addEventListener("click", function(){
+
+
+        })
+   }
+
+
+</script>
+
+
+
+</body>
+</html>

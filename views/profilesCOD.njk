@@ -1,0 +1,150 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    {% block head %}
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Bora jogar? - CS:GO
+        </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.discordapp.com/attachments/690023297727201317/720356110313324585/logo3.png">
+    {% endblock %}
+
+<body id='igorCOD-background'>
+    
+
+    <div id='igorCOD-game'>
+            <img src="https://imag.malavida.com/mvimgbig/download-fs/call-of-duty-warzone-26418-0.jpg" alt="cod">
+        <h2>Call of Duty:   Warzone</h2>
+    </div>
+
+    <div class="profile">
+        {% for item in items %}
+            <section class="profile_online">
+                <div class="first">
+                    <div class="profile_image">
+                        <img src={{item.image}} alt="eu">
+                    </div>
+
+                    <div class="profile_name">
+                        <h1>
+                            {{item.name}}
+                        </h1>
+                    </div>
+                </div>
+                <div class="profile_game_name">
+                    <p>
+                        {{item.gameName}}
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <div class="patente">
+                        <img id='igorCOD-patente' src={{item.patenteimg3}} alt="platina">
+                        <p>
+                            {{item.patente3}}
+                        </p>
+                    </div>
+
+                    <div class="call_online">
+                        <p>
+                            {{item.call}}
+                        </p>
+                    </div>
+
+                    <div class="invite">
+                        <img src={{item.inviteimg}} alt="convite">
+                        <a>{{item.invite}}</a>
+
+                    </div>
+
+                </div>
+
+            </section>
+        {% endfor %}
+    </div>
+
+    <div class="modal-overlay">
+        <div  class="modal">
+            <a class="close-modal">
+                <span class="material-icons">
+                    highlight_off
+                </span>
+            </a>
+
+            <div  class="modal-content">
+                <div class="chat-profile">
+                    <div class="profile_image">
+                        <img id="chat-image" src="https://cdn.discordapp.com/attachments/722264819755122798/722266646550413352/57220b6ed759aa11b10527ba838cb129c48cdfa698bedace73fbaf9b7538a50d.png" alt="eu">
+                        <img id="game-image" src="https://imag.malavida.com/mvimgbig/download-fs/call-of-duty-warzone-26418-0.jpg" alt="Counter-Strike_Global_Offensive">
+                    </div>
+
+                    <div >
+                        <h1 id="chat-name">
+                            Guilherme
+                        </h1>
+                    </div>
+
+                    <div class="profile_game_name">
+                        <p id="profile-chat-name">guilherminhoGameplays</p>
+                    </div>
+                </div>
+
+                <div class="chat">
+                    <div class="caixa-texto">
+                        <span id="add" class="material-icons">add_circle_outline</span>
+                        <input type="text" placeholder="Digite aqui...">
+                        <span id="send" class="material-icons">send</span>
+                    </div>
+                </div>
+
+                <div class="text">
+                    <div class="my-text">
+                        <p>
+                            Eae, quer fechar um squad??
+                        </p>
+                        <img src="https://image.flaticon.com/icons/svg/2919/2919573.svg" alt="profile-image">
+                    </div>
+
+                    <div class="his-text">
+                        <img src="https://cdn.discordapp.com/attachments/722264819755122798/722266646550413352/57220b6ed759aa11b10527ba838cb129c48cdfa698bedace73fbaf9b7538a50d.png" alt="perfil-image">
+                        <p>Só se for agora!!!</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<p>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤ
+</p>
+
+<script src="scripts.js"></script>
+
+</body>
+{% endblock %}
+
+    {% block igorheader %}
+         <header id='igorCOD-header'>
+            <div class="top">
+                <div class="header-image">
+                    <a class="a-igor" href="/inicio"><img src="https://cdn.discordapp.com/attachments/689605205313978476/722165785946095696/logo3.png" alt="logo"></a>
+                </div>
+                <div class="menu a-bah">
+                    <a href="/sobre">Sobre</a>
+                    <a href="/ajuda">Ajuda</a>
+                    <a href="/">Leaderboard</a>
+                    <a href="/amigos">Amigos</a>
+                </div>
+                <div class="choose-game">
+                    <span id="igor" class="material-icons">account_box</span>
+                </div>
+                <div id="icon"></div>
+            </div>
+        </header>
+    {% endblock igorheader %}
+
+    
